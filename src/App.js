@@ -22,7 +22,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-
+        <p>hi</p>
         <nav className="navbar navbar-expand-lg navbar-light fixed-top">
           <div className="container">
             <Link className="navbar-brand" to={"/"}>Self_Pratcice.in</Link>
