@@ -59,19 +59,31 @@ class Form_add extends Component {
         console.log(this.state.percentage)
         return (
             <div>
-                <div>Enter First Number:<input placeholder="Enter First Number" onChange={(e) => { this.handleFirst(e) }} /></div>
-                <div>Enter Second Number:<input placeholder="Enter Second Number" onChange={(e) => { this.handleSecond(e) }} /></div>
-                <button onClick = {this.handleadd}>Add</button>
-                <button onClick = {this.handleminus}>Minus</button>
-                <button onClick = {this.handlemultiply}>Multiply</button>
-                <button onClick = {this.handledivide}>Divide</button>
-            <div>
-                <p>{this.state.first_number}</p>
-                <p>{this.state.second_number}</p>
-                <p>{this.state.adding}</p>
-                <p>{this.state.Minus}</p>
-                <p>{this.state.Multiply}</p>
-                <p>{this.state.Divide}</p>
+                <h2 > Calculator</h2>
+                <div className="form-group">
+                    <label for ="first_number" className="sr-only">First Number</label>
+                    <input className="form-control" placeholder="Enter First Number" onChange={(e) => { this.handleFirst(e) }} />
+                    </div>
+                <div className="form-group">
+                    <label for =" second_number" className="sr-only"> Second Number</label>
+                    <input className="form-control " placeholder="Enter Second Number" onChange={(e) => { this.handleSecond(e) }} />
+                    </div>
+                    <div className ="form-group">
+                <button className ="btn btn-primary mr-1" onClick = {this.handleadd}>Add</button>
+                <button className ="btn btn-primary mr-1" onClick = {this.handleminus}>Minus</button>
+                <button className ="btn btn-primary mr-1" onClick = {this.handlemultiply}>Multiply</button>
+                <button className ="btn btn-primary mr-1" onClick = {this.handledivide}>Divide</button>
+                </div>
+            <div className = "list_container">
+
+            <div className="list-name">{this.state.first_number}</div>
+            <div className="list-name">{this.state.second_number}</div>
+            <div className="list-name">{this.state.adding}</div>
+            <div className="list-name">{this.state.Minus}</div>
+            <div className="list-name">{this.state.Multiply}</div>
+            <div className="list-name">{this.state.Divide}</div>
+
+    
             </div>
             </div>
 

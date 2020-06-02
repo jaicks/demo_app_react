@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 class Form_add extends Component {
-    constructor(props){
+    constructor(props) {
         super();
         this.state = {
             first_name: "",
@@ -21,20 +21,25 @@ class Form_add extends Component {
     }
 
     handleadd = (e) => {
-        console.log(this.state.first_name + " " + this.state.last_name )
+        console.log(this.state.first_name + " " + this.state.last_name)
         this.setState({ adding: this.state.first_name + " " + this.state.last_name })
     }
     render() {
         return (
             <div>
-                <div>First Name:<input placeholder="Enter First Name" onChange={(e) => { this.handleFirstname(e) }} /></div>
-                <div>Last Name:<input placeholder="Enter Last Name" onChange={(e) => { this.handleLastname(e) }} /></div>
-                <button onClick = {this.handleadd}>Add</button>
-            <div>
-                <p>{this.state.first_name}</p>
-                <p>{this.state.last_name}</p>
-                <p>{this.state.adding}</p>
-            </div>
+                <div className="form-group">
+                    <label for="first_name">First Name</label>
+                    <input className="form-control" placeholder="Enter First Name" onChange={(e) => { this.handleFirstname(e) }} /></div>
+                <div className="form-group">
+                    <label for="last_name">Last Name</label>
+                    <input className="form-control" placeholder="Enter Last Name" onChange={(e) => { this.handleLastname(e) }} /></div>
+                <button className="btn btn-primary mb-4" onClick={this.handleadd}>Add</button>
+
+                <div className="list_container">
+                    <div className="list-name">{this.state.first_name}</div>
+                    <div className="list-name">{this.state.last_name}</div>
+                    <div className="list-name">{this.state.adding}</div>
+                </div>
             </div>
 
         )

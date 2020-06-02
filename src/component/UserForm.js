@@ -45,11 +45,26 @@ class UserForm extends Component {
         console.log(this.state.userList)
         return (
             <div>
-                <div>Name:<input placeholder="Enter Name" onChange={(e) => { this.handleName(e) }} /></div>
-                <div>Email:<input placeholder="Enter Email" onChange={(e) => { this.handleEmail(e) }} /></div>
-                <div>Mobile No:<input placeholder="Enter Mobile No" onChange={(e) => { this.handleMobile(e) }} /></div>
-                <div>City:<input placeholder="Enter City" onChange={(e) => { this.handleCity(e) }} /></div>
-                <button onClick={this.onSubmit}>Add</button>
+
+                <div className="form-group">
+                    <label for="name" className="sr-only" >Name</label>
+                    <input className="form-control" placeholder="Enter Name" onChange={(e) => { this.handleName(e) }} />
+                </div>
+                <div className="form-group">
+                    <label for="email" className="sr-only" >Email:</label>
+                    <input className="form-control" placeholder="Enter Email" onChange={(e) => { this.handleEmail(e) }} />
+                </div>
+                <div className="form-group">
+                    <label for="mobileno" className="sr-only" >Mobile No:</label>
+                    <input className="form-control" placeholder="Enter Mobile No" onChange={(e) => { this.handleMobile(e) }} />
+                </div>
+                <div className="form-group">
+                    <label for="city" className="sr-only">City</label>
+                    <input className="form-control mb-2" placeholder="Enter City" onChange={(e) => { this.handleCity(e) }} />
+                    </div>
+                    
+                <button className="btn btn-primary mb-4"  onClick={this.onSubmit}>Add</button>
+                
 
                 {
                     <div>{this.state.userList && this.state.userList.map((data, index) => {

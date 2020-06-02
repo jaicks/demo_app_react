@@ -40,32 +40,24 @@ class Form_sample extends Component {
         return (
             <div>
 
-                <div>Name:<input placeholder="Enter Name" onChange={(e) => { this.handleName(e) }} /></div>
-                <div>Email:<input placeholder="Enter Email" onChange={(e) => { this.handleEmail(e) }} /></div>
-                <div>Mobile No:<input placeholder="Enter Mobile No" onChange={(e) => { this.handleMobile(e) }} /></div>
-                {/* <button onChange={this.onSubmit}>Add</button> */}
-
+                <div className="form-group">
+                    <label for ="name">Name</label>
+                    <input className="form-control" placeholder="Enter Name" onChange={(e) => { this.handleName(e) }} /></div>
+                <div className="form-group">
+                    <label for ="eail"> Email</label>
+                    <input className="form-control" placeholder="Enter Email" onChange={(e) => { this.handleEmail(e) }} /></div>
+                <div className="form-group">
+                    <label for ="mobile">Mobile Number</label>
+                    <input className="form-control mb-4" placeholder="Enter Mobile No" onChange={(e) => { this.handleMobile(e) }} /></div>
                 {
-                    <div>
-                    <p>{this.state.name}</p>
-                    <p>{this.state.email}</p>
-                    <p>{this.state.Mobile}</p>
+                    <div className="list_container">
+                        <div className="list-name">{this.state.name}</div>
+                        <div className="list-name">{this.state.email}</div>
+                        <div className="list-name">{this.state.Mobile}</div>
+
+
                     </div>
-                    // <div>{this.state.user_List && this.state.user_List.map((data, index) => {
-                    //     console.log(data,index)
-                    //     return (
-                    //         <div className="list_container" key={index}>
-                    //             <div className="profile"></div>
-                    //             <div className="list-name">{data.name}</div>
-                    //             <div className="list-email">{data.email}</div>
-                    //             <div className="list-city">{data.mobile}</div>
-                    //         </div>
-
-                    //     );
-                    // })}
-                    // </div>
                 }
-
             </div>
         )
     }

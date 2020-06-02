@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import AddIcon from '@material-ui/icons/Add';
+import RemoveRoundedIcon from '@material-ui/icons/RemoveRounded';
 
 class Tutorial extends Component {
     constructor(props) {
@@ -25,9 +26,14 @@ class Tutorial extends Component {
         return (
             <div>
                 <div>{this.props.state}</div>
-                <button onClick= {this.handleClick_add_click}>Add Me</button>
-                <button onClick= {this.handleClick_minus_click}>Minus Me</button>
-                <div>{this.state.initial_value}</div>
+                <button className="btn btn-primary mr-2 mb-3" onClick= {this.handleClick_add_click}>
+                    <AddIcon/>
+                </button>
+                <button className="btn btn-primary mb-3 " onClick= {this.handleClick_minus_click}>
+                    <RemoveRoundedIcon/>
+                </button>
+                <div >
+                    {this.state.initial_value}</div>
                 
                 {/* <div>{this.state.initial_value}</div> */}
             </div>
